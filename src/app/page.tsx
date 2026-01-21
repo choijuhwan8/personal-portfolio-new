@@ -15,6 +15,7 @@ import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import { Analytics } from "@vercel/analytics/next";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -147,6 +148,7 @@ export default function Home() {
       )} */}
       {/* <Projects range={[2]} /> */}
       {/* <Mailchimp /> */}
+      <Analytics />
     </Column>
   );
 }
