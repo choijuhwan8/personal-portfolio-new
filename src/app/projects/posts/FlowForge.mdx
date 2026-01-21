@@ -1,0 +1,182 @@
+---
+title: "FlowForge"
+subtitle: "Full-stack Task Management System"
+summary: "A task and schedule management web app delivered in SMU’s IS212 module. Role-based access, task assignment, grouping, deadlines, notifications, and reporting."
+image: "/images/Flowforge.jpg"
+publishedAt: "2025-11-01"
+tag: "Full-stack Task Management System"
+---
+
+## Overview
+
+FlowForge is a task and schedule management web application developed as part of **SMU’s IS212 module**.  
+It supports role-based access, structured task assignment, project grouping, deadlines, notifications, and reporting to support team-level productivity.
+
+---
+
+## 🎯 Core Features
+
+### Task & Workflow
+- **Task Management** — Create, update, archive, and delete tasks with priority levels (1–10)
+- **Subtask System** — One-level subtask hierarchy with parent task inheritance
+- **Recurring Tasks** — Automatic task regeneration based on due date and frequency
+
+### Organization & Collaboration
+- **Project Organization** — Group tasks by project with dedicated dashboards
+- **Comments** — Add, edit, and delete task comments with user hydration
+- **File Attachments** — Upload and manage files linked to tasks
+
+### Access & Governance
+- **User Roles** — Admin, Manager, and Staff roles with department-based visibility (TM068)
+- **Notifications** — Real-time updates for task assignments, changes, and comments
+- **Search & Filtering** — Filter tasks by status, project, assignee, and more
+- **Access Control** — Role-based permissions enforcing department visibility rules
+
+---
+
+## 🧱 Tech Stack
+
+### Backend
+- FastAPI — modern Python web framework
+- Google Cloud Firestore — NoSQL database
+- Firebase Admin — authentication & access control
+- Pydantic — data validation & schema management
+- pytest — testing framework
+
+### Frontend
+- React 19 — UI library
+- Vite — build tool
+- TanStack Query — data fetching & caching
+- React Router — client-side routing
+- Tailwind CSS v3 — utility-first styling
+- shadcn/ui — reusable component library
+- Lucide React — icon system
+
+---
+
+## ⚡ Quick Start
+
+### Clone Repository
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    {
+      code: "git clone https://github.com/KeJun11/SPM-G9T7.git\ncd SPM-G9T7",
+      language: "bash",
+    },
+  ]}
+/>
+
+---
+
+## 🔧 Backend Setup
+
+Navigate to the backend directory:
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    { code: "cd backend", language: "bash" },
+  ]}
+/>
+
+Install dependencies (recommended: `uv`):
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    { code: "uv venv\nuv sync", language: "bash" },
+  ]}
+/>
+
+Alternatively, using `pip`:
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    { code: "pip install -r requirements.txt", language: "bash" },
+  ]}
+/>
+
+Start the backend server (development):
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    {
+      code: "uv run -m app.main\n# OR\nuvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+      language: "bash",
+    },
+  ]}
+/>
+
+Production:
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    {
+      code: "uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4",
+      language: "bash",
+    },
+  ]}
+/>
+
+**API Documentation**
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- Health Check: `http://localhost:8000/health`
+
+---
+
+## 🎨 Frontend Setup
+
+Navigate to the frontend directory:
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    { code: "cd frontend/app2", language: "bash" },
+  ]}
+/>
+
+Install dependencies:
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    { code: "npm install", language: "bash" },
+  ]}
+/>
+
+Run the application:
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    { code: "npm run dev", language: "bash" },
+  ]}
+/>
+
+Build for production:
+
+<CodeBlock
+  compact
+  marginBottom="16"
+  codes={[
+    { code: "npm run build\nnpm run preview", language: "bash" },
+  ]}
+/>
+
+**Access frontend**
+- Development: `http://localhost:5173` (or the port shown in the terminal)
