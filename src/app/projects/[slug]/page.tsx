@@ -169,10 +169,9 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
         paddingLeft="40"
         fitHeight
         position="fixed"
-        top="120"
         gap="16"
         m={{ hide: true }}
-        style={{ alignSelf: "flex-start" }}
+        style={{ alignSelf: "flex-start", top: "120px" }}
       >
         <HeadingNav fitHeight />
       </Column>
