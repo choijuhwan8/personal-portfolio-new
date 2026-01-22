@@ -61,3 +61,40 @@ body {
 [data-theme="dark"] {
   --page-background: #000000;
 }
+
+.spline-hero {
+  height: 100svh;
+}
+
+@media (max-width: 991px) {
+  .spline-hero {
+    display: none;
+  }
+
+  .home-hero-text {
+    min-height: 100svh;
+    justify-content: center;
+  }
+
+  .spline-hero {
+    height: 70svh;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .spline-hero iframe {
+    width: 120%;
+    height: 120%;
+    margin-left: -10%;
+    margin-top: -5%;
+    transform: scale(0.9);
+    transform-origin: center top;
+  }
+}
+
+.home-hero-text,
+.home-hero-text * {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}

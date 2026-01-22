@@ -47,6 +47,7 @@ export default function Home() {
         <Column fillWidth horizontal="center" gap="m">
           <RevealFx fillWidth horizontal="center" paddingBottom="24">
             <div
+              className="spline-hero"
               style={{
                 width: "calc(100% + (var(--responsive-space-l) * 2))",
                 maxWidth: "calc(100% + (var(--responsive-space-l) * 2))",
@@ -67,7 +68,7 @@ export default function Home() {
               />
             </div>
           </RevealFx>
-          <Column maxWidth="s" horizontal="center" align="center">
+          <Column maxWidth="s" horizontal="center" align="center" className="home-hero-text">
             {/* {home.featured.display && (
               <RevealFx
                 fillWidth
